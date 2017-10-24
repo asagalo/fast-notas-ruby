@@ -1,0 +1,105 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.google.com/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.1p111
+      Host:
+      - www.google.com
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Location:
+      - https://www.google.com.br/?gws_rd=cr&dcr=0&ei=OXLuWarsG8qXwgSL7rrIAQ
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=UTF-8
+      P3p:
+      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
+      Date:
+      - Mon, 23 Oct 2017 22:50:33 GMT
+      Server:
+      - gws
+      Content-Length:
+      - '273'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Set-Cookie:
+      - NID=115=Il-6Jnb9bdVWTg-b7MpFnrmnqT-fmzhyhaeOvSNVGD6qgAUM-tRuJ6GfpHAiQRzgZh-oSbgmxb4cyzPwV5yKfncmXNumpeGOMguANWyREPhu3Lal4nNzoCsAHFdmgV2d;
+        expires=Tue, 24-Apr-2018 22:50:33 GMT; path=/; domain=.google.com; HttpOnly
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="39,38,37,35"
+    body:
+      encoding: UTF-8
+      string: "<HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<TITLE>302
+        Moved</TITLE></HEAD><BODY>\n<H1>302 Moved</H1>\nThe document has moved\n<A
+        HREF=\"https://www.google.com.br/?gws_rd=cr&amp;dcr=0&amp;ei=OXLuWarsG8qXwgSL7rrIAQ\">here</A>.\r\n</BODY></HTML>\r\n"
+    http_version: 
+  recorded_at: Mon, 23 Oct 2017 22:50:33 GMT
+- request:
+    method: get
+    uri: https://www.google.com.br/?dcr=0&ei=OXLuWarsG8qXwgSL7rrIAQ&gws_rd=cr
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.4.1p111
+      Host:
+      - www.google.com.br
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 23 Oct 2017 22:50:33 GMT
+      Expires:
+      - "-1"
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/html; charset=ISO-8859-1
+      P3p:
+      - CP="This is not a P3P policy! See g.co/p3phelp for more info."
+      Content-Encoding:
+      - gzip
+      Server:
+      - gws
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Set-Cookie:
+      - 1P_JAR=2017-10-23-22; expires=Mon, 30-Oct-2017 22:50:33 GMT; path=/; domain=.google.com.br
+      - NID=115=JSRlOOD_ijD2xOpDbj1h0ro-CWUbim-wc6AbNXQleC7p3bw7iSaKFjyUTFKDH-otljVLeeThg7JP4e6RR-x-A1vDq9TNueBJuiS7Nkcxr5XkYnNdmNliJEu5wK2wwiYG;
+        expires=Tue, 24-Apr-2018 22:50:33 GMT; path=/; domain=.google.com.br; HttpOnly
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="41,39,38,37,35"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version: 
+  recorded_at: Mon, 23 Oct 2017 22:50:33 GMT
+recorded_with: VCR 3.0.3

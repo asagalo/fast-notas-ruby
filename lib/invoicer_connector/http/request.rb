@@ -1,10 +1,8 @@
-require "base64"
-require "restclient"
+require "rest-client"
 require "json"
-require "http/authorization"
 
-module InvoicerConnector
-  class Http::Request
+module InvoicerConnector::Http
+  class Request
 
     attr_accessor :api_key, :api_endpoint
 
@@ -15,12 +13,12 @@ module InvoicerConnector
       @api_payload = api_payload
     end
 
-    def all(params={})
+    def all()
       request(:get, @api_endpoint, params)
     end
 
-    def get(params={})
-      request(:get, "@api_endpoint}/params['id']")
+    def get(url, params={})
+      request(:get, url, params)
     end
 
     def post(payload)
@@ -39,24 +37,15 @@ module InvoicerConnector
 
     private
 
-      def request(method= :get, api_endpoint=nil, params={}, api_payload=nil)
-          @last_request = RestClient::Request.execute(
-            method: method,
-            url: "#{LIVE_URL}#{api_endpoint}?#{params.to_query}",
-            payload: payload,
-            headers: @api_headers
-          )
+    def request(method=:get, url=nil, params={}, payload=nil)
+        @last_request = RestClient::Request.execute(
+          method: method,
+          url: url,
+          payload: payload,
+          headers: @api_headers
+        )
 
-          response(@last_request)
-      end
-
-      def parse_url
-        # TODO : Encontrar uma forma de criar todas url`s possíveis no invoicer
-        if params["id"]
-          LIVE_URL + @api_endpoint + params["id"]
-        else
-          LIVE_URL + @api_endpoint
-        end
-      end
+        response(@last_request)
+    end
   end
 end

@@ -4,6 +4,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gem 'vcr'
 gem 'webmock'
+gem 'rest-client'
 
 group :development, :test do
   gem 'byebug'
