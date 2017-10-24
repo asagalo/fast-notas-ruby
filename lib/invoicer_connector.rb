@@ -1,5 +1,5 @@
 require "invoicer_connector/version"
-require "invoicer_connector/http/request"
+require "invoicer_connector/http/client"
 
 module InvoicerConnector
   LIVE_URL = 'https://api.fastnotas.com/'

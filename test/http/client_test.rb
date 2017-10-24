@@ -1,14 +1,14 @@
 require 'test_helper'
 
-describe InvoicerConnector::Http::Request do
+describe InvoicerConnector::Http::Client do
 
   def setup
-    @request = InvoicerConnector::Http::Request.new
+    @client = InvoicerConnector::Http::Client.new
   end
 
   it 'should do a get in google' do
     VCR.use_cassette('request-google', match_requests_on: [:host, :method]) do
-      @request.get('https://www.google.com')
+      @client.get('https://www.google.com')
     end
   end
 end

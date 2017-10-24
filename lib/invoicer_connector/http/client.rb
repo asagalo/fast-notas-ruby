@@ -2,7 +2,7 @@ require "rest-client"
 require "json"
 
 module InvoicerConnector::Http
-  class Request
+  class Client
 
     attr_accessor :api_key, :api_endpoint
 
